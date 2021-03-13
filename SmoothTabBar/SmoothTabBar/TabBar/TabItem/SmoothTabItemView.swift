@@ -2,7 +2,7 @@
 //  SmoothTabItemView.swift
 //  SmoothTabBar
 //
-//  Created by Dhruvik Dhanani on 07/01/21.
+//  Created by Dhruvik Dhanani on 12/03/21.
 //
 
 import UIKit
@@ -19,6 +19,7 @@ class SmoothTabItemView: UIView {
         self.tabItem = tabItem 
         tabImageView.image = tabItem.image
         lblTitle.text = tabItem.tabName
+        
         if self.tag == 100 {
             lblTitle.isHidden = false
             tabImageView.tintColor = .themeColor

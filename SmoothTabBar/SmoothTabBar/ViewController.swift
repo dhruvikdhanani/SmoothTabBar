@@ -8,12 +8,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
+  var tabController: VC_TYPE = .Dummy
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
   }
-
-
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setUPColors()
+  }
+  
+  func setUPColors() {
+    if tabController == .Home {
+      self.view.backgroundColor = .orange
+    }
+    else if tabController == .Cart {
+      self.view.backgroundColor = .lightText
+    }
+    else if tabController == .Profile {
+      self.view.backgroundColor = .magenta
+    }
+    else if tabController == . Menu {
+      self.view.backgroundColor = .blue
+    }
+  }
+  
 }
 

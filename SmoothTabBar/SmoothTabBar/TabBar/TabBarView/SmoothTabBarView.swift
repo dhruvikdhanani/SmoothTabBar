@@ -1,8 +1,8 @@
 //
-//  SmoothTabBarView.swift
+//  SmoothTabBar.swift
 //  SmoothTabBar
 //
-//  Created by Dhruvik Dhanani on 06/01/21.
+//  Created by Dhruvik Dhanani on 12/03/21.
 //
 
 import UIKit
