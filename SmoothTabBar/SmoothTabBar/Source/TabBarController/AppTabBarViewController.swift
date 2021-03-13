@@ -7,36 +7,33 @@
 
 import UIKit
 
-class DashboardViewController: UITabBarController {
+class AppTabBarViewController: UITabBarController {
   
   let tabBarView:SmoothTabBarView = UIView.fromNib()
   var tabData:[TabItem] = [TabItem]()
   
+  convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, smoothData:[TabItem]) {
+    self.init(nibName: nibNameOrNil, bundle: nil)
+    self.tabData = smoothData
+    tabBarView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: tabBar.frame.height)
+    tabBarView.setupData(tabData: tabData)
+    self.tabBar.addSubview(tabBarView)
+    self.viewControllers = setTab()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     delegate = self
-    UITabBar.appearance().tintColor = UIColor.themeColor
-    tabBarView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: tabBar.frame.height)
-    
-    let home1 = ViewController()
-    home1.tabController = .Home
-    tabData.append(TabItem(imageName: "for_you", tabName: "Pizza"))
-    
-    let home2 = ViewController()
-    home2.tabController = .Menu
-    tabData.append(TabItem(imageName: "order", tabName: "Order"))
-    
-    let home3 = ViewController()
-    home3.tabController = .Cart
-    tabData.append(TabItem(imageName: "cart", tabName: "Cart"))
-    
-    let home4 = ViewController()
-    home4.tabController = .Profile
-    tabData.append(TabItem(imageName: "profile", tabName: "Profile"))
-    
-    tabBarView.setupData(tabData: tabData)
-    self.tabBar.addSubview(tabBarView)
-    viewControllers = [home1, home2, home3, home4]
+  }
+  
+  func setTab() -> [UIViewController] {
+      var vc: [UIViewController] = []
+      for tab in tabData {
+        if vc.count != 5 {
+          vc.append(tab.storyboardName)
+        }
+      }
+      return vc
   }
   
   func selection()  {
@@ -71,7 +68,7 @@ class DashboardViewController: UITabBarController {
   }
 }
 
-extension DashboardViewController: UITabBarControllerDelegate {
+extension AppTabBarViewController: UITabBarControllerDelegate {
   func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
     if let item = tabBarView.viewWithTag(tabBarController.selectedIndex+100) as? SmoothTabItemView {
       item.btnTabAction()

@@ -11,8 +11,7 @@
 		856235E425FC656B00EBBFD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856235E325FC656B00EBBFD6 /* ViewController.swift */; };
 		856235E925FC656E00EBBFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856235E825FC656E00EBBFD6 /* Assets.xcassets */; };
 		856235EC25FC656E00EBBFD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856235EA25FC656E00EBBFD6 /* LaunchScreen.storyboard */; };
-		856235F925FC663000EBBFD6 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856235F725FC663000EBBFD6 /* DashboardViewController.swift */; };
-		856235FA25FC663000EBBFD6 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856235F825FC663000EBBFD6 /* DashboardViewController.xib */; };
+		856235F925FC663000EBBFD6 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856235F725FC663000EBBFD6 /* AppTabBarViewController.swift */; };
 		8562360325FC665A00EBBFD6 /* SmoothTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856235FE25FC665A00EBBFD6 /* SmoothTabBarView.swift */; };
 		8562360425FC665A00EBBFD6 /* SmoothTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856235FF25FC665A00EBBFD6 /* SmoothTabBarView.xib */; };
 		8562360525FC665A00EBBFD6 /* SmoothTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562360125FC665A00EBBFD6 /* SmoothTabItemView.swift */; };
@@ -27,8 +26,7 @@
 		856235E825FC656E00EBBFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		856235EB25FC656E00EBBFD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		856235ED25FC656E00EBBFD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		856235F725FC663000EBBFD6 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		856235F825FC663000EBBFD6 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		856235F725FC663000EBBFD6 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
 		856235FE25FC665A00EBBFD6 /* SmoothTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothTabBarView.swift; sourceTree = "<group>"; };
 		856235FF25FC665A00EBBFD6 /* SmoothTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmoothTabBarView.xib; sourceTree = "<group>"; };
 		8562360125FC665A00EBBFD6 /* SmoothTabItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmoothTabItemView.swift; sourceTree = "<group>"; };
@@ -67,8 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				8562360825FC668300EBBFD6 /* Extensions.swift */,
-				856235FC25FC665A00EBBFD6 /* TabBar */,
-				856235F625FC663000EBBFD6 /* Dashboard */,
+				856235FC25FC665A00EBBFD6 /* Source */,
 				856235DF25FC656B00EBBFD6 /* AppDelegate.swift */,
 				856235E325FC656B00EBBFD6 /* ViewController.swift */,
 				856235E825FC656E00EBBFD6 /* Assets.xcassets */,
@@ -78,22 +75,22 @@
 			path = SmoothTabBar;
 			sourceTree = "<group>";
 		};
-		856235F625FC663000EBBFD6 /* Dashboard */ = {
+		856235F625FC663000EBBFD6 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				856235F725FC663000EBBFD6 /* DashboardViewController.swift */,
-				856235F825FC663000EBBFD6 /* DashboardViewController.xib */,
+				856235F725FC663000EBBFD6 /* AppTabBarViewController.swift */,
 			);
-			path = Dashboard;
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
-		856235FC25FC665A00EBBFD6 /* TabBar */ = {
+		856235FC25FC665A00EBBFD6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				856235F625FC663000EBBFD6 /* TabBarController */,
 				856235FD25FC665A00EBBFD6 /* TabBarView */,
 				8562360025FC665A00EBBFD6 /* TabItem */,
 			);
-			path = TabBar;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		856235FD25FC665A00EBBFD6 /* TabBarView */ = {
@@ -174,7 +171,6 @@
 				856235EC25FC656E00EBBFD6 /* LaunchScreen.storyboard in Resources */,
 				856235E925FC656E00EBBFD6 /* Assets.xcassets in Resources */,
 				8562360425FC665A00EBBFD6 /* SmoothTabBarView.xib in Resources */,
-				856235FA25FC663000EBBFD6 /* DashboardViewController.xib in Resources */,
 				8562360625FC665A00EBBFD6 /* SmoothTabItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,7 +184,7 @@
 			files = (
 				856235E425FC656B00EBBFD6 /* ViewController.swift in Sources */,
 				8562360925FC668300EBBFD6 /* Extensions.swift in Sources */,
-				856235F925FC663000EBBFD6 /* DashboardViewController.swift in Sources */,
+				856235F925FC663000EBBFD6 /* AppTabBarViewController.swift in Sources */,
 				856235E025FC656B00EBBFD6 /* AppDelegate.swift in Sources */,
 				8562360525FC665A00EBBFD6 /* SmoothTabItemView.swift in Sources */,
 				8562360325FC665A00EBBFD6 /* SmoothTabBarView.swift in Sources */,

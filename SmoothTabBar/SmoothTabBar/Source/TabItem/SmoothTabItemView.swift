@@ -38,10 +38,12 @@ class SmoothTabItemView: UIView {
 
 class TabItem {
     
+  var storyboardName: UIViewController!
   var image: UIImage?
   var tabName:String?
   
-  init(imageName: String,  tabName: String) {
+  init(_ storyboardName: UIViewController, imageName: String,  tabName: String) {
+    self.storyboardName = storyboardName
     self.image = UIImage(named: imageName)
     self.tabName = tabName
   }
