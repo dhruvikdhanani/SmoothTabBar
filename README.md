@@ -19,13 +19,13 @@ TabItem(v1, imageName: "home", tabName: "Home")
 // pass tabName as String
 
 func smoothTab() -> [TabItem] {
-  let v1 = HomeViewController(nibName: "HomeViewController", bundle: nil)
+  let v1 = HomeViewController()
 
-  let v2 = HomeViewController(nibName: "HomeViewController", bundle: nil)
+  let v2 = HomeViewController()
 
-  let v3 = HomeViewController(nibName: "HomeViewController", bundle: nil)
+  let v3 = HomeViewController()
 
-  let v4 = HomeViewController(nibName: "HomeViewController", bundle: nil)
+  let v4 = HomeViewController()
 
   
   let t1 = TabItem(v1, imageName: "home", selectedImage: nil, tabName: nil)
@@ -37,7 +37,7 @@ func smoothTab() -> [TabItem] {
 }
 ```
 
-## 2) Set MagicTabBarViewController as rootViewController in didFinishLaunchingWithOptions
+## 2) Set AppTabBarViewController as rootViewController in didFinishLaunchingWithOptions
 
 ```swift
 window = UIWindow(frame: UIScreen.main.bounds)
