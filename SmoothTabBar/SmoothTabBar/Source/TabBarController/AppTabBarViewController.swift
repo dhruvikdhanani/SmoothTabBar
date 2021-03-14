@@ -29,8 +29,12 @@ class AppTabBarViewController: UITabBarController {
   func setTab() -> [UIViewController] {
       var vc: [UIViewController] = []
       for tab in tabData {
-        if vc.count != 5 {
+        if vc.count < 5 {
           vc.append(tab.storyboardName)
+        } else {
+          let alert = UIAlertController(title: "Alert", message: "You can not add more than 5 view controller", preferredStyle: UIAlertController.Style.alert)
+          alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+          self.present(alert, animated: true, completion: nil)
         }
       }
       return vc
